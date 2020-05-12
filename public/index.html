@@ -9,9 +9,19 @@
 </head>
 <body>
 
+    <h1>Currency Exchange</h1>
     <div id="app">
+    
+        <label for="euros">Euros: </label>
+        <input type="number" />
 
-        
+
+        <label for="currency_select">Select a Currency:</label>
+        <select id="currency_select" v-model="selectedCurrency">
+          <option disabled value="">Select a currency</option>
+          <option v-for="currency in currencies.rates" :value="currencies">  </option>
+        </select>
+
 
     </div>
     
